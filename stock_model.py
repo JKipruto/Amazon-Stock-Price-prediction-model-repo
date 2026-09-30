@@ -1,7 +1,6 @@
 import joblib
 from fastapi import FastAPI
 import os
-import numpy as np
 import pandas as pd
 from pydantic import BaseModel
 
@@ -17,20 +16,19 @@ if os.path.exists("Amazon_dataset_model_pipe.pkl"):
     # model = FastAPI()
 
     # @model.post("/Amazon Stock Price Predict")
-    def prediction(Open: float, High: float, Low: float, Close: float, Volume: float):
+    def prediction(Open: float, High: float, Low: float, Close: float, Volume: int):
 
         Data = {
-            "Open": Open,
-            "High": High,
-            "Low": Low,
-            "Close": Close,
-            "Volume": Volume
+            "Open": [Open],
+            "High": [High],
+            "Low": [Low],
+            "Close": [Close],
+            "Volume": [Volume]
         }
         data_df = pd.DataFrame(Data)
-        x = np.array([[data_df["Open"], data_df["High"],
-                     data_df["Low"], data_df["Close"], data_df["Volume"]]])
-        prediction = stock_model.predict(x)
-        return {"predicted_close_tomorrow": float(prediction[0])}
+
+        prediction = stock_model.predict(data_df)
+        return float(prediction[0])
     try:
         open_price = float(input("Enter the OPEN price: "))
         high_price = float(input("Enter the HIGH Price: "))
