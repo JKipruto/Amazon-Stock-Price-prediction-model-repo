@@ -1,4 +1,4 @@
-Amazon Stock Price Prediction
+Amazon Stock Price Prediction.
 
 A machine learning regression project that predicts the next trading day’s Amazon (AMZN) closing price using historical stock-market data.
 
