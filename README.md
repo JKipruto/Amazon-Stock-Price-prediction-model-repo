@@ -4,7 +4,7 @@ A machine learning regression project that predicts the next trading day’s Ama
 
 The project focuses on building a complete machine learning workflow, from data exploration and preprocessing to model comparison, hyperparameter tuning, model persistence, and real-world inference.
 
-Project status: 🟡 Machine Learning pipeline completed. FastAPI deployment/API integration is the next step.
+Project status: Machine Learning pipeline completed. FastAPI deployment/API integration is the next step.
 
 
 
