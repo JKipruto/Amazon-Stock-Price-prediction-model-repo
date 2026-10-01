@@ -96,7 +96,6 @@ StandardScaler from Scikit-learn was used to standardize the numerical features.
 
 The scaler was fitted using the training data and then applied to the test data to avoid data leakage.
 
-⸻
 
  Machine Learning Models
 
@@ -256,27 +255,6 @@ and return a prediction such as:
 }
 
 
-Project Structure
-
-amazon-stock-price-prediction/
-│
-├── data/
-│   └── amazon_stock.csv
-│
-├── notebooks/
-│   └── stock_prediction_eda.ipynb
-│
-├── src/
-│   ├── train.py
-│   ├── predict.py
-│   └── api.py
-│
-├── models/
-│   └── ridge_pipeline.pkl
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
 
 The exact structure may change as the FastAPI component is added.
 
